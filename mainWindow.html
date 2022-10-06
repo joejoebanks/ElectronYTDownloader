@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script defer src="render.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="mainsection">
+    <div class="title">
+      YouTube Downloader
+    </div>
+
+
+    <div class="name-section">
+      <div id="filename" class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">File name</span>
+        </div>
+        <input id="nameinput" onkeypress="return event.key != ' '" type="text" class="form-control" placeholder="MyYoutubeVideo1" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+
+      <div>
+        <div class="filesave">
+          <button id="savebtn" type="button" class="btn btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+              height="16" fill="currentColor" class="bi bi-archive" viewBox="0 0 16 16">
+              <path
+                d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+            </svg></button>
+        </div>
+        <div class="save-tag">
+          <p>Downloads/save/fart/affsd</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="linksection">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Link</span>
+        </div>
+        <input type="text" class="form-control" id="linkinput" placeholder="https://youtube.com/" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+    </div>
+
+    <div class="optionsection">
+
+      <div class="optionarea">
+        <div class="btn-group">
+          <input type="radio" class="btn-check" name="options" id="radio1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="radio1">highest</label>
+
+          <input type="radio" class="btn-check" name="options" id="radio2" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="radio2">lowest</label>
+
+          <input type="radio" class="btn-check" name="options" id="radio3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="radio3">highestaudio</label>
+
+          <input type="radio" class="btn-check" name="options" id="radio4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="radio4">lowestaudio</label>
+
+          <input type="radio" class="btn-check" name="options" id="radio5" autocomplete="off">
+          <label class="btn btn-outline-primary" for="radio5">highestvideo</label>
+
+          <input type="radio" class="btn-check" name="options" id="radio6" autocomplete="off">
+          <label class="btn btn-outline-primary" for="radio6">lowestvideo</label>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="progress">
+        <div class="progress-bar" id="progressbar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+          aria-valuemax="100"></div>
+      </div>
+
+      <button id="downloadbtn" type="submit" class="btn btn-danger">Download <svg xmlns="http://www.w3.org/2000/svg"
+          width="16" height="16" fill="currentColor" class="bi bi-box-arrow-down" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M3.5 10a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 0 0 1h2A1.5 1.5 0 0 0 14 9.5v-8A1.5 1.5 0 0 0 12.5 0h-9A1.5 1.5 0 0 0 2 1.5v8A1.5 1.5 0 0 0 3.5 11h2a.5.5 0 0 0 0-1h-2z" />
+          <path fill-rule="evenodd"
+            d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708l3 3z" />
+        </svg></button>
+    </div>
+
+  </div>
+
+  <script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "youtubedownloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Luke Flock",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^21.1.0",
+    "ffmpeg": "^0.0.4",
+    "m3u8stream": "^0.8.6",
+    "miniget": "^4.2.2",
+    "sax": "^1.2.4",
+    "update-electron-app": "^2.0.1",
+    "ytdl-core": "^4.11.2"
+  }
+}
