@@ -1,6 +1,3 @@
-// const electron = require('electron');
-// const {ipcRenderer} = electron;
-
 // Setting up import variables
 const electron = require('electron');
 const fs = require('fs');
@@ -44,7 +41,8 @@ document.querySelector("#radio6").addEventListener('click', () =>{
 })
 downloadBtn.addEventListener('click', () => {
     downloadBtn.disabled = true;
-    sendUrl();
+    var link = document.querySelector('#linkinput').value;
+    sendUrl(link);
 })
 document.querySelector('#savebtn').addEventListener('click', () => {
     ipcRenderer.send('file-dialog')
@@ -57,8 +55,12 @@ ipcRenderer.on('filepath', (event, result) =>{
 
 // https://www.youtube.com/watch?v=3A4ZHuElMvc
 
-const sendUrl = () =>{
-    var link = document.querySelector('#linkinput').value;
+function setThumbnail(url){
+    var youtube_video_id = iframe_src.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
+    var video_thumbnail = $('<img src="//img.youtube.com/vi/'+youtube_video_id+'/0.jpg">');
+}
+
+const sendUrl = (link) =>{
     const progressbar = document.querySelector('#progressbar');
     progressbar.style.width = 0+"%"
 

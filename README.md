@@ -1,2 +1,2 @@
-# ElectronYTDownloader
-A little YouTube downloader application, made with electron
+# YouTubeDownloaderElectron
+ A YouTube downloader made with Electron

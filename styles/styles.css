@@ -6,16 +6,17 @@ body {
 
 /* Main body section */
 .mainsection {
-    margin-top: 60px;
+    margin-top: 30px;
     width: 80%;
     display: grid;
     row-gap: 35px;
     grid-template-areas:
         "title"
+        "thumbnail"
         "name"
         "link"
         "options";
-    grid-template-rows: 80px  40px 40px 200px;
+    grid-template-rows: 80px 80px 40px 40px 200px;
 }
 
 /* Section with the title of program */
@@ -26,6 +27,11 @@ body {
     text-align: center;
     grid-area: title;
     font-size: 50px;
+}
+
+.thumbnail-section{
+    display: grid;
+    grid-area: thumbnail;
 }
 
 /* Section where you put in the name of file and location */

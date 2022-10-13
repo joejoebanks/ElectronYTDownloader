@@ -28,7 +28,7 @@ app.on('ready', function(){
             protocol: 'file:',
             slashes: true
     }));
-    mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools()
 
     //Build menu from template
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
