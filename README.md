@@ -42,11 +42,3 @@ cd ElectronYTDownloader
 npm install
 npm start
 ```
-
-## Package the Application
-
-The application can be packaged using the command 
-
-```bash
-npm run package
-```
