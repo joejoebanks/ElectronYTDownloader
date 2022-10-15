@@ -9,7 +9,7 @@ Install NodeJS from [https://nodejs.org/en/](https://nodejs.org/en/)
 
 ### Install Electron Locally
 
-Install Electron forge using the following command
+Install Electron to project folder using the following command
 
 ```bash
 cd ElectronYTDownloader
@@ -17,7 +17,7 @@ npm install electron --save-dev
 ```
 ### Install ffmpeg Locally
 
-Install Electron forge using the following command
+Install ffmpeg to project folder using the following command
 
 ```bash
 cd ElectronYTDownloader
@@ -26,7 +26,7 @@ npm install ffmpeg
 
 ### Install ytdl-core Locally
 
-Install Electron forge using the following command
+Install ytdl-core to project folder using the following command
 
 ```bash
 cd ElectronYTDownloader
