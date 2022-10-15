@@ -14,13 +14,28 @@ Install Electron forge using the following command
 ```bash
 npm install -g electron-forge
 ```
+### Install ffmpeg
+
+Install Electron forge using the following command
+
+```bash
+npm install -g ffmpeg
+```
+
+### Install ytdl-core
+
+Install Electron forge using the following command
+
+```bash
+npm install -g ytdl-core
+```
 
 ## Running the application
 
 Go into the project folder and run the application using the following commands
 
 ```bash
-cd simple-desktop-app-electronjs
+cd ElectronYTDownloader
 npm install
 npm start
 ```
