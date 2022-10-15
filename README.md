@@ -1,7 +1,5 @@
 # YouTubeDownloaderElectron
  A YouTube downloader made with Electron
-<<<<<<< HEAD
-=======
  
 ## Pre-requisites
 
@@ -49,4 +47,3 @@ The application can be packaged using the command
 ```bash
 npm run package
 ```
->>>>>>> parent of bfd36ed (Update README.md)
