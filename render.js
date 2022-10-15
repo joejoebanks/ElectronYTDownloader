@@ -4,16 +4,25 @@ const fs = require('fs');
 const ytdl = require('ytdl-core');
 const path = require('path');
 const {ipcRenderer} = electron;
+// Setting up DOM objects
+var downloadBtn = document.querySelector('#downloadbtn');
+var savetag = document.querySelector('.save-tag');
+var fnameinput = document.querySelector('#nameinput');
+var thumbnailImg = document.querySelector("#thumbnail");
 // Setting up global variables
 var setting = "lowest";
 var videoformat = "mp4";
 var filename = "video";
 var filePath = path.resolve(__dirname)
-// Setting up DOM objects
-var downloadBtn = document.querySelector('#downloadbtn');
-var savetag = document.querySelector('.save-tag');
-savetag.innerHTML = filePath.slice(0,50)+"...";
-var fnameinput = document.querySelector('#nameinput')
+setPathDisplay(filePath);
+
+function setPathDisplay(filePath){
+    if (filePath.length<=55){
+        savetag.innerHTML = filePath;
+    }else{
+        savetag.innerHTML = filePath.slice(0,55)+"...";
+    }
+}
 
 document.querySelector("#radio1").addEventListener('click', () =>{
     setting = "highest";
@@ -39,27 +48,47 @@ document.querySelector("#radio6").addEventListener('click', () =>{
     setting = "lowestvideo";
     videoformat = 'mp4';
 })
+
+document.querySelector('#linkinput').addEventListener('change', () => {
+    var link = document.querySelector('#linkinput').value;
+    if (validLink(link)){
+        var results = link.match('[\\?&]v=([^&#]*)');
+        var video = (results === null) ? link : results[1];
+        var image =  'http://img.youtube.com/vi/' + video + '/0.jpg';
+
+        console.log(image);
+        thumbnailImg.src = image;
+    }else{
+        thumbnailImg.src = 'images/BlankThumbnail.jpg';
+    }
+});
+
 downloadBtn.addEventListener('click', () => {
     downloadBtn.disabled = true;
     var link = document.querySelector('#linkinput').value;
     sendUrl(link);
 })
+
 document.querySelector('#savebtn').addEventListener('click', () => {
     ipcRenderer.send('file-dialog')
 })
+
 ipcRenderer.on('filepath', (event, result) =>{
     filePath = result;
-    savetag.innerHTML = filePath.slice(0,50) + "...";
-    console.log(filePath)
+    setPathDisplay(filePath);
+    console.log(filePath);
 })
 
-// https://www.youtube.com/watch?v=3A4ZHuElMvc
+function validLink(link){
+    return ytdl.validateURL(link);
+}
 
 function setThumbnail(url){
     var youtube_video_id = iframe_src.match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/).pop();
     var video_thumbnail = $('<img src="//img.youtube.com/vi/'+youtube_video_id+'/0.jpg">');
 }
 
+// Takes youtube url and fetches the youtube download
 const sendUrl = (link) =>{
     const progressbar = document.querySelector('#progressbar');
     progressbar.style.width = 0+"%"
@@ -69,7 +98,7 @@ const sendUrl = (link) =>{
     }
     console.log(filename)
 
-    if (ytdl.validateURL(link)) {
+    if (validLink(link)) {
         const video = ytdl(link, {quality: setting})
         const stream = fs.createWriteStream(filePath+`\\${filename}.${videoformat}`)
         console.log(stream)
@@ -84,6 +113,7 @@ const sendUrl = (link) =>{
                 downloadBtn.disabled = false;
                 setTimeout(() =>{
                     alert('Your download is finished')
+                    thumbnailImg.src = 'images/BlankThumbnail.jpg';
                     progressbar.style.width = 0+"%"
                 }, 500)
             }
@@ -91,6 +121,7 @@ const sendUrl = (link) =>{
         video.on('error', err =>{
             alert(err)
             downloadBtn.disabled = false;
+            thumbnailImg.src = 'images/BlankThumbnail.jpg';
         })
     }else{
         alert('INVALID LINK');
