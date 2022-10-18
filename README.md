@@ -7,26 +7,26 @@
 
 Install NodeJS from [https://nodejs.org/en/](https://nodejs.org/en/)
 
-### Install Electron Locally
+### Install Electron to project folder
 
-Install Electron forge using the following command
+Install Electron to project folder using the following command
 
 ```bash
 cd ElectronYTDownloader
 npm install electron --save-dev
 ```
-### Install ffmpeg Locally
+### Install ffmpeg to project folder
 
-Install Electron forge using the following command
+Install ffmpeg to project folder using the following command
 
 ```bash
 cd ElectronYTDownloader
 npm install ffmpeg
 ```
 
-### Install ytdl-core Locally
+### Install ytdl-core to project folder
 
-Install Electron forge using the following command
+Install ytdl-core to project folder using the following command
 
 ```bash
 cd ElectronYTDownloader
@@ -41,12 +41,4 @@ Go into the project folder and run the application using the following commands
 cd ElectronYTDownloader
 npm install
 npm start
-```
-
-## Package the Application
-
-The application can be packaged using the command 
-
-```bash
-npm run package
 ```
