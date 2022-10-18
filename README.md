@@ -1,5 +1,5 @@
 # YouTubeDownloaderElectron
- A YouTube downloader made with Electron
+ A YouTube downloader made with Electron. Requires an internet connection to fetch youtube videos.
  
 ## Pre-requisites
 
