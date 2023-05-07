@@ -15,4 +15,11 @@ Install dependencies with the following command in project folder
 cd ElectronYTDownloader
 npm install
 ```
+## Running the application
 
+Go into the project folder and run the application using the following commands
+
+```bash
+cd ElectronYTDownloader
+npm start
+```
