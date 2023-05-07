@@ -7,38 +7,12 @@
 
 Install NodeJS from [https://nodejs.org/en/](https://nodejs.org/en/)
 
-### Install Electron to project folder
+### Install Dependencies
 
-Install Electron to project folder using the following command
-
-```bash
-cd ElectronYTDownloader
-npm install electron --save-dev
-```
-### Install ffmpeg to project folder
-
-Install ffmpeg to project folder using the following command
-
-```bash
-cd ElectronYTDownloader
-npm install ffmpeg
-```
-
-### Install ytdl-core to project folder
-
-Install ytdl-core to project folder using the following command
-
-```bash
-cd ElectronYTDownloader
-npm install ytdl-core
-```
-
-## Running the application
-
-Go into the project folder and run the application using the following commands
+Install dependencies with the following command in project folder
 
 ```bash
 cd ElectronYTDownloader
 npm install
-npm start
 ```
+
